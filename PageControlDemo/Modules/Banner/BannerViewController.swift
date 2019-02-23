@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class BannerViewController: UIViewController {
 
     @IBOutlet var pageControl: UIPageControl!
     @IBOutlet var scrollView: UIScrollView!
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
     
 }
 
-extension ViewController: UIScrollViewDelegate {
+extension BannerViewController: UIScrollViewDelegate {
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
         pageControl.currentPage = Int(pageNumber)
